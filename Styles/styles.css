@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #F8D629;
+    --secondary-color: #000000;
+    --tertiary-color : #FEF6F6;
+
+    --main-font: "Montserrat", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    overflow-x: hidden;
+}
+
+body{
+    height: 100vh;
+}
+
+header,
+#homePage,
+body {
+    background-color: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    user-select: none;
+    animation: upDown 1.5s ease-out forwards;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    justify-content: space-around;
+    padding: 1.5%;
+    max-width: 80%;
+    
+}
+
+nav a {
+    color: var(--secondary-color);
+    font-size: .7em;
+}
+
+nav a:hover {
+    color: var(--tertiary-color);
+}
+
+#logo {
+    max-width: 45%;
+}
+
+
+#cart {
+    display: flex;
+    justify-content: center;
+    border-radius: 20em;
+    background-color: black;
+    padding: 15%;
+    max-width: 3em;
+    max-height: 3em;
+}
+
+#cart:hover{
+    cursor: pointer;
+}
+
+#shopCart {
+    background-color: inherit;
+    max-width: 60%;
+    max-height: 60%;
+}
+
+#homePage {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    height: 100vh;
+    align-items: center;
+}
+
+#homePhoto {
+    max-width: 40%;
+    max-height: 60%;
+    animation : rightLeft 1.5s ease-out forwards;
+}
+
+#homeTextArticle {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    animation: leftRight 1.5s ease-out forwards;
+}
+
+#divText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#divText h3 {
+    width: 50%;
+    padding: 0 5em 0 5em;
+    font-size: 2em;
+}
+
+#divText p {
+    width: 50%;
+    padding: 0 5em 0 5em;
+}
+
+#homePageButton {
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border-radius: 1em;
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+#homePageButton:hover {
+    color: #FFD700;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--tertiary-color);
+    width: 100%;
+    animation: leftRight 1.5s ease-out forwards;
+}
+
+#contactPhoto {
+    width: 40%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 0 .5em 0;
+    gap: 1em 0;
+}
+
+#contactPhoto img {
+    border-radius: 1em;
+    max-width: 50%;
+    min-height: 50%;
+}
+
+
+#contactArticle {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em 0;
+}
+
+#contactArticle h3,
+#contactArticle p {
+    padding: 0 2em 0 2em;
+}
+
+
+#contactButton {
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border-radius: 1em;
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+#contactButton:hover {
+    color: #FFD700;
+}
+
+.invertedTriangle{
+    width: 0;
+    height: 0;
+    border-left: 1.5em solid transparent; 
+    border-right: 1.5em solid transparent; 
+    border-top: 2.2em solid var(--main-color); 
+}
+
+
+@keyframes leftRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes upDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
